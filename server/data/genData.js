@@ -75,7 +75,7 @@ function generateEmployees(raw) {
     employees.push(employee);
   }
 
-  return { employees: employees };
+  return employees;
 }
 
 function generateCredentials(raw) {
@@ -98,7 +98,7 @@ function generateCredentials(raw) {
 function generateData() {
   const raw = generateRaw();
   const employees = generateEmployees(raw);
-  let credentials = generateCredentials(raw);
+  const credentials = generateCredentials(raw);
 
 
   return { employees: employees, credentials: credentials};

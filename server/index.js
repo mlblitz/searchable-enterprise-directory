@@ -20,27 +20,33 @@ db.once("open", function () {
     console.log("Connected successfully");
 });
 
-// const Schema = new mongoose.Schema({});
-// const Film = mongoose.model("films", Schema);
-// const Planet = mongoose.model("planets", Schema);
+const Schema = new mongoose.Schema({});
+const Employees = mongoose.model("employees", Schema);
+const Credentials = mongoose.model("credentials", Schema);
 
 
-// app.get("/films", async (req, res) => {
-//     const films = await Film.find({});
+app.get("/home", async (req, res) => {
+    const employees = await Employees.find({});
 
-//     try {
-//         res.send(films);
-//     } catch (error) {
-//         res.status(500).send(error);
-//     }
-// });
+    try {
+        res.send(employees);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
 
-app.get("/", async (req, res) => {
-    const data = {message: "hello world!"};
-    res.send(data);
-})
+app.get("/login", async (req, res) => {
+    const credentials = await Credentials.find({});
 
-genData.generateJSON();
+    try {
+        res.send(credentials);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
+// uncomment this line if you want to generate the json data files
+// genData.generateJSON();
 
 // app.use(express.static("./../build"));
 app.listen(8081, () => { console.log("listening on port 8081") });
