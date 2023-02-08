@@ -1,6 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import Header from './Header';
+import './Header.css';
 
 function App() {
   const url = "http://localhost:8081";
@@ -21,11 +22,12 @@ useEffect(() => {
   fetchData();
 }, []);
 
-  return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
-  );
+return (
+  <div className="App">
+    <Header/>
+  </div>
+);
 }
 
 export default App;
+
