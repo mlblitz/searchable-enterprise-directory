@@ -28,12 +28,12 @@ function createRandomUser(jobType) {
 
 function generateEmployees() {
   let employees = [];
-  let random = {};
-  let employee = {};
+  let raw = [];
 
   // regular employees
-  for (let id = 1; id <= 20; id++) {
-    random = createRandomUser();
+  for (let i = 0; i < 20; i++) {
+    let random = createRandomUser();
+    let employee = {};
     employee._id = random._id;
     employee.first_name = random.first_name;
     employee.last_name = random.last_name;
@@ -43,11 +43,13 @@ function generateEmployees() {
     employee.salary = random.salary;
 
     employees.push(employee);
+    raw.push(random);
   }
 
   // HR employees
-  for (let id = 1; id <= 5; id++) {
-    random = createRandomUser("HR");
+  for (let i = 0; i < 5; i++) {
+    let random = createRandomUser("HR");
+    let employee = {};
     employee._id = random._id;
     employee.first_name = random.first_name;
     employee.last_name = random.last_name;
@@ -57,28 +59,45 @@ function generateEmployees() {
     employee.salary = random.salary;
 
     employees.push(employee);
+    raw.push(random);
   }
 
-  return employees;
+  return {employees: employees, raw:raw};
+}
+
+function generateCredentials(raw) {
+  let credentials = [];
+
+  for (let i = 0; i < raw.length; i++) {
+    let raw_data = raw[i];
+    let credential = {};
+
+    credential._id = raw_data._id;
+    credential.username = raw_data.username;
+    credential.password = raw_data.password;
+
+    credentials.push(credential);
+  }
+
+  return credentials;
 }
 
 function generateData() {
-  const employees = generateEmployees();
-  let credentials = [];
+  const raw_emp = generateEmployees();
+  const employees = raw_emp.employees;
+  const raw = raw_emp.raw;
+  let credentials = generateCredentials(raw);
   let direct_reports = [];
 
-  let credential = {};
-  let direct_report = {};
 
-
-
-  return { employees: employees };
+  return { employees: employees, credentials:credentials };
 }
 
 function generateJSON() {
 
   let dataObj = generateData();
   fs.writeFileSync('./data/employees.json', JSON.stringify(dataObj.employees, null, '\t'));
+  fs.writeFileSync('./data/credentials.json', JSON.stringify(dataObj.credentials, null, '\t'));
 }
 
 exports.generateJSON = generateJSON;
