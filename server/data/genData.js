@@ -12,9 +12,10 @@ function createRandomUser(jobType) {
   let password = faker.internet.password();
   let direct_reports = [];
   let manager = "";
+  let id = faker.datatype.uuid();
 
   return {
-    _id: faker.datatype.uuid(),
+    _id: id,
     first_name: firstName,
     last_name: lastName,
     phone_number: phone,

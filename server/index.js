@@ -46,7 +46,7 @@ app.get("/login", async (req, res) => {
 });
 
 // uncomment this line if you want to generate the json data files
-// genData.generateJSON();
+genData.generateJSON();
 
 // app.use(express.static("./../build"));
 app.listen(8081, () => { console.log("listening on port 8081") });
