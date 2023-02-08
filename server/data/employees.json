@@ -1,227 +1,304 @@
-[
-	{
-		"_id": "5ab3b230-2ce7-4e25-ad17-9651ff79554a",
-		"first_name": "Ken",
-		"last_name": "Fahey",
-		"phone_number": "853-602-409",
-		"job_role": "Supervisor",
-		"work_location": "High Point",
-		"salary": "$132465"
-	},
-	{
-		"_id": "87997492-868f-4f18-ad7f-83bbcf836828",
-		"first_name": "Albina",
-		"last_name": "O'Keefe",
-		"phone_number": "030-663-900",
-		"job_role": "Specialist",
-		"work_location": "Pharr",
-		"salary": "$101241"
-	},
-	{
-		"_id": "fd7b6364-a463-44d2-9e6e-832c664556f8",
-		"first_name": "Sigurd",
-		"last_name": "Boyer",
-		"phone_number": "330-856-506",
-		"job_role": "Designer",
-		"work_location": "Sacramento",
-		"salary": "$70958"
-	},
-	{
-		"_id": "e7ff810a-003c-47f5-a7fd-dcf9d29125fd",
-		"first_name": "Selina",
-		"last_name": "Smith",
-		"phone_number": "750-646-387",
-		"job_role": "Engineer",
-		"work_location": "Passaic",
-		"salary": "$52234"
-	},
-	{
-		"_id": "ae20d67f-85f2-4a73-93ca-436231ffa7bd",
-		"first_name": "Vesta",
-		"last_name": "Daugherty",
-		"phone_number": "369-639-644",
-		"job_role": "Officer",
-		"work_location": "Providence",
-		"salary": "$110033"
-	},
-	{
-		"_id": "2045cdf8-612a-477b-8de2-7aa4c7272a57",
-		"first_name": "Michel",
-		"last_name": "Will",
-		"phone_number": "817-638-804",
-		"job_role": "Developer",
-		"work_location": "Alafaya",
-		"salary": "$67610"
-	},
-	{
-		"_id": "444fa72c-120a-4c17-baf9-4957107333bd",
-		"first_name": "Krystal",
-		"last_name": "Thompson",
-		"phone_number": "399-249-579",
-		"job_role": "Facilitator",
-		"work_location": "Cheyenne",
-		"salary": "$82727"
-	},
-	{
-		"_id": "036168ee-05ba-48be-b557-165afbddc59e",
-		"first_name": "Delilah",
-		"last_name": "Rogahn",
-		"phone_number": "391-509-583",
-		"job_role": "Executive",
-		"work_location": "Bryan",
-		"salary": "$53376"
-	},
-	{
-		"_id": "98090afd-9c36-4881-b83a-481763dcb4f6",
-		"first_name": "Ettie",
-		"last_name": "Kuphal",
-		"phone_number": "395-771-754",
-		"job_role": "Facilitator",
-		"work_location": "Little Rock",
-		"salary": "$109715"
-	},
-	{
-		"_id": "bfd08433-e57a-4823-8491-02704e585c85",
-		"first_name": "Thurman",
-		"last_name": "Schimmel",
-		"phone_number": "305-962-992",
-		"job_role": "Administrator",
-		"work_location": "Casas Adobes",
-		"salary": "$118854"
-	},
-	{
-		"_id": "b8918d59-5ed0-4702-9890-d5e6b934498a",
-		"first_name": "Mike",
-		"last_name": "Barton",
-		"phone_number": "353-524-138",
-		"job_role": "Associate",
-		"work_location": "Battle Creek",
-		"salary": "$107326"
-	},
-	{
-		"_id": "82dc0af0-0a2b-4983-b178-08d6fe952d77",
-		"first_name": "Carolyn",
-		"last_name": "Wilkinson",
-		"phone_number": "002-116-414",
-		"job_role": "Representative",
-		"work_location": "Littleton",
-		"salary": "$90138"
-	},
-	{
-		"_id": "d9c224ba-1993-46a3-8b2d-2fe4e70676e3",
-		"first_name": "Columbus",
-		"last_name": "Corwin",
-		"phone_number": "296-344-264",
-		"job_role": "Producer",
-		"work_location": "North Port",
-		"salary": "$103662"
-	},
-	{
-		"_id": "ab217636-6dea-4268-a50c-26b9310d76d0",
-		"first_name": "Stanley",
-		"last_name": "Hegmann",
-		"phone_number": "623-455-426",
-		"job_role": "Consultant",
-		"work_location": "Norfolk",
-		"salary": "$73115"
-	},
-	{
-		"_id": "c2cdecbc-451e-4c21-b455-f2d05b417f44",
-		"first_name": "Jolie",
-		"last_name": "Bode",
-		"phone_number": "827-186-255",
-		"job_role": "Director",
-		"work_location": "Rancho Santa Margarita",
-		"salary": "$83339"
-	},
-	{
-		"_id": "b307a669-5661-4297-b398-87c38c591798",
-		"first_name": "Molly",
-		"last_name": "Dietrich",
-		"phone_number": "923-138-886",
-		"job_role": "Architect",
-		"work_location": "Littleton",
-		"salary": "$77112"
-	},
-	{
-		"_id": "1c4ee18c-2fd3-40d8-ab83-791147ed714b",
-		"first_name": "Ayana",
-		"last_name": "Hermiston",
-		"phone_number": "292-706-646",
-		"job_role": "Engineer",
-		"work_location": "West New York",
-		"salary": "$99473"
-	},
-	{
-		"_id": "bfefd7ae-0957-46d4-9a65-59388754f668",
-		"first_name": "Rudolph",
-		"last_name": "Nader",
-		"phone_number": "686-838-962",
-		"job_role": "Liaison",
-		"work_location": "Evanston",
-		"salary": "$92323"
-	},
-	{
-		"_id": "ea831d7b-3267-4459-88c1-f5bcdcc223cc",
-		"first_name": "Carleton",
-		"last_name": "Greenfelder",
-		"phone_number": "289-144-685",
-		"job_role": "Coordinator",
-		"work_location": "Euless",
-		"salary": "$69442"
-	},
-	{
-		"_id": "23c6f952-ee77-4f42-884f-846da92c03ea",
-		"first_name": "Ryleigh",
-		"last_name": "Lesch",
-		"phone_number": "492-150-939",
-		"job_role": "Consultant",
-		"work_location": "Glendale",
-		"salary": "$100282"
-	},
-	{
-		"_id": "f2a14fd4-5d93-4486-817e-4478139d1ead",
-		"first_name": "Maiya",
-		"last_name": "Weimann",
-		"phone_number": "010-543-997",
-		"job_role": "HR",
-		"work_location": "Wyoming",
-		"salary": "$147338"
-	},
-	{
-		"_id": "19c6950f-0b60-487f-870a-c685c8406b19",
-		"first_name": "Audra",
-		"last_name": "Carroll",
-		"phone_number": "717-333-824",
-		"job_role": "HR",
-		"work_location": "San Jacinto",
-		"salary": "$104630"
-	},
-	{
-		"_id": "9742f671-bfb7-4dfd-b56d-199bc4c65664",
-		"first_name": "Emilie",
-		"last_name": "Adams",
-		"phone_number": "835-475-463",
-		"job_role": "HR",
-		"work_location": "Overland Park",
-		"salary": "$106282"
-	},
-	{
-		"_id": "ba23381f-dbde-490d-af1d-50173333f7d9",
-		"first_name": "Pascale",
-		"last_name": "Greenholt",
-		"phone_number": "570-589-132",
-		"job_role": "HR",
-		"work_location": "Brentwood",
-		"salary": "$92156"
-	},
-	{
-		"_id": "c94f0a0e-152f-473a-af2f-d54b61bacca7",
-		"first_name": "Kara",
-		"last_name": "Johnston",
-		"phone_number": "333-314-031",
-		"job_role": "HR",
-		"work_location": "Bend",
-		"salary": "$56883"
-	}
-]
+{
+	"employees": [
+		{
+			"_id": "cbfa11db-f87e-4dcd-b62f-755ed79a9860",
+			"first_name": "Soledad",
+			"last_name": "Littel",
+			"phone_number": "683-557-955",
+			"job_role": "Coordinator",
+			"work_location": "Albany",
+			"salary": "$105524",
+			"manager": "76e13246-32f0-4926-afa7-870e3ef1ae9e",
+			"direct_reports": []
+		},
+		{
+			"_id": "83fad9f5-0b14-4727-9aeb-8f5501ee4c91",
+			"first_name": "Yasmeen",
+			"last_name": "Leffler",
+			"phone_number": "532-455-478",
+			"job_role": "Agent",
+			"work_location": "Noblesville",
+			"salary": "$96589",
+			"manager": "9452c701-e0e8-4bc8-bbba-ce8f3e1a0e68",
+			"direct_reports": []
+		},
+		{
+			"_id": "1b15d739-5a27-4106-aa76-c21272552184",
+			"first_name": "Carter",
+			"last_name": "Keeling",
+			"phone_number": "191-944-106",
+			"job_role": "Producer",
+			"work_location": "Escondido",
+			"salary": "$55143",
+			"manager": "9452c701-e0e8-4bc8-bbba-ce8f3e1a0e68",
+			"direct_reports": []
+		},
+		{
+			"_id": "c526ef1e-36dc-4f61-9e39-063486967c7e",
+			"first_name": "Benjamin",
+			"last_name": "Welch",
+			"phone_number": "760-614-094",
+			"job_role": "Officer",
+			"work_location": "Broken Arrow",
+			"salary": "$66809",
+			"manager": "6d29aa4e-2c58-4159-b822-0b09cc62c8de",
+			"direct_reports": []
+		},
+		{
+			"_id": "634b9592-ac16-4a70-9e73-0d30f12ae5ae",
+			"first_name": "Conor",
+			"last_name": "Sauer",
+			"phone_number": "549-035-472",
+			"job_role": "Technician",
+			"work_location": "Bismarck",
+			"salary": "$80536",
+			"manager": "76e13246-32f0-4926-afa7-870e3ef1ae9e",
+			"direct_reports": []
+		},
+		{
+			"_id": "81b1010b-6df0-4095-a48b-4a80bf31030b",
+			"first_name": "Sarina",
+			"last_name": "Larkin",
+			"phone_number": "748-992-611",
+			"job_role": "Technician",
+			"work_location": "El Cajon",
+			"salary": "$76948",
+			"manager": "15e6cf54-0b07-4c2d-9486-ffb8914720e8",
+			"direct_reports": []
+		},
+		{
+			"_id": "28ceebe9-4991-4d73-a822-e49948022e95",
+			"first_name": "Enola",
+			"last_name": "Ebert",
+			"phone_number": "559-571-593",
+			"job_role": "Agent",
+			"work_location": "Carrollton",
+			"salary": "$55821",
+			"manager": "76e13246-32f0-4926-afa7-870e3ef1ae9e",
+			"direct_reports": []
+		},
+		{
+			"_id": "e13d0f4d-f804-4bcd-b259-3427a7263ee8",
+			"first_name": "Jordane",
+			"last_name": "Purdy",
+			"phone_number": "105-403-181",
+			"job_role": "Assistant",
+			"work_location": "Palo Alto",
+			"salary": "$109097",
+			"manager": "6d29aa4e-2c58-4159-b822-0b09cc62c8de",
+			"direct_reports": []
+		},
+		{
+			"_id": "401e7055-b750-4455-8096-0563e3d8271f",
+			"first_name": "Jarrett",
+			"last_name": "Weissnat",
+			"phone_number": "988-749-471",
+			"job_role": "Supervisor",
+			"work_location": "Rosemead",
+			"salary": "$113226",
+			"manager": "15e6cf54-0b07-4c2d-9486-ffb8914720e8",
+			"direct_reports": []
+		},
+		{
+			"_id": "d9311995-e586-4c9b-8709-118de4ae6c99",
+			"first_name": "Ardith",
+			"last_name": "Herzog",
+			"phone_number": "125-913-142",
+			"job_role": "Producer",
+			"work_location": "Tustin",
+			"salary": "$80232",
+			"manager": "433811cc-5733-4112-88d2-21cfaa8650b4",
+			"direct_reports": []
+		},
+		{
+			"_id": "f5784d73-2ecb-4947-b931-cf802d209984",
+			"first_name": "Madyson",
+			"last_name": "Bednar",
+			"phone_number": "905-890-442",
+			"job_role": "Consultant",
+			"work_location": "Biloxi",
+			"salary": "$145970",
+			"manager": "433811cc-5733-4112-88d2-21cfaa8650b4",
+			"direct_reports": []
+		},
+		{
+			"_id": "8e6ba4cd-4f2c-4444-a0bb-e65b6b582314",
+			"first_name": "Marina",
+			"last_name": "Trantow",
+			"phone_number": "051-341-368",
+			"job_role": "Developer",
+			"work_location": "Las Cruces",
+			"salary": "$60226",
+			"manager": "6d29aa4e-2c58-4159-b822-0b09cc62c8de",
+			"direct_reports": []
+		},
+		{
+			"_id": "a09f87b1-d369-4a38-b752-9e2f508501d8",
+			"first_name": "Noe",
+			"last_name": "Bradtke",
+			"phone_number": "054-619-545",
+			"job_role": "Assistant",
+			"work_location": "Margate",
+			"salary": "$127391",
+			"manager": "6d29aa4e-2c58-4159-b822-0b09cc62c8de",
+			"direct_reports": []
+		},
+		{
+			"_id": "00991a87-8058-48e2-9e35-85724585b37b",
+			"first_name": "Ernie",
+			"last_name": "Klocko",
+			"phone_number": "478-095-165",
+			"job_role": "Director",
+			"work_location": "Logan",
+			"salary": "$67230",
+			"manager": "433811cc-5733-4112-88d2-21cfaa8650b4",
+			"direct_reports": []
+		},
+		{
+			"_id": "8f897e1e-2157-428d-b25f-e53ba5428eba",
+			"first_name": "Manuela",
+			"last_name": "Mueller",
+			"phone_number": "545-740-558",
+			"job_role": "Coordinator",
+			"work_location": "Clovis",
+			"salary": "$67365",
+			"manager": "6d29aa4e-2c58-4159-b822-0b09cc62c8de",
+			"direct_reports": []
+		},
+		{
+			"_id": "4c3f4bf8-f601-4c6d-b3cf-09583b0d9391",
+			"first_name": "Trinity",
+			"last_name": "McClure",
+			"phone_number": "265-134-430",
+			"job_role": "Analyst",
+			"work_location": "Oshkosh",
+			"salary": "$68936",
+			"manager": "15e6cf54-0b07-4c2d-9486-ffb8914720e8",
+			"direct_reports": []
+		},
+		{
+			"_id": "98e27190-3342-4af8-aa8f-443db22abb99",
+			"first_name": "Andrew",
+			"last_name": "Cassin",
+			"phone_number": "729-776-759",
+			"job_role": "Orchestrator",
+			"work_location": "Beavercreek",
+			"salary": "$53241",
+			"manager": "76e13246-32f0-4926-afa7-870e3ef1ae9e",
+			"direct_reports": []
+		},
+		{
+			"_id": "c245da16-9955-400b-acdc-f7cea313a428",
+			"first_name": "Juvenal",
+			"last_name": "Stehr",
+			"phone_number": "900-834-100",
+			"job_role": "Representative",
+			"work_location": "Fort Worth",
+			"salary": "$54021",
+			"manager": "76e13246-32f0-4926-afa7-870e3ef1ae9e",
+			"direct_reports": []
+		},
+		{
+			"_id": "71ff7ebe-244b-4b1b-b4f3-d783b00badfb",
+			"first_name": "Andreanne",
+			"last_name": "Gutkowski",
+			"phone_number": "007-616-268",
+			"job_role": "Facilitator",
+			"work_location": "Burlington",
+			"salary": "$136792",
+			"manager": "9452c701-e0e8-4bc8-bbba-ce8f3e1a0e68",
+			"direct_reports": []
+		},
+		{
+			"_id": "aaff1ecf-2351-45b2-9a51-edf802db7447",
+			"first_name": "Otha",
+			"last_name": "Becker",
+			"phone_number": "728-151-650",
+			"job_role": "Strategist",
+			"work_location": "Arcadia",
+			"salary": "$114576",
+			"manager": "6d29aa4e-2c58-4159-b822-0b09cc62c8de",
+			"direct_reports": []
+		},
+		{
+			"_id": "76e13246-32f0-4926-afa7-870e3ef1ae9e",
+			"first_name": "Jaeden",
+			"last_name": "Robel",
+			"phone_number": "015-109-753",
+			"job_role": "HR",
+			"work_location": "Fargo",
+			"salary": "$106694",
+			"manager": "",
+			"direct_reports": [
+				"cbfa11db-f87e-4dcd-b62f-755ed79a9860",
+				"634b9592-ac16-4a70-9e73-0d30f12ae5ae",
+				"28ceebe9-4991-4d73-a822-e49948022e95",
+				"98e27190-3342-4af8-aa8f-443db22abb99",
+				"c245da16-9955-400b-acdc-f7cea313a428"
+			]
+		},
+		{
+			"_id": "9452c701-e0e8-4bc8-bbba-ce8f3e1a0e68",
+			"first_name": "Ford",
+			"last_name": "Adams",
+			"phone_number": "271-225-434",
+			"job_role": "HR",
+			"work_location": "Baltimore",
+			"salary": "$58779",
+			"manager": "",
+			"direct_reports": [
+				"83fad9f5-0b14-4727-9aeb-8f5501ee4c91",
+				"1b15d739-5a27-4106-aa76-c21272552184",
+				"71ff7ebe-244b-4b1b-b4f3-d783b00badfb"
+			]
+		},
+		{
+			"_id": "6d29aa4e-2c58-4159-b822-0b09cc62c8de",
+			"first_name": "Lillie",
+			"last_name": "Haley",
+			"phone_number": "657-323-075",
+			"job_role": "HR",
+			"work_location": "Milwaukee",
+			"salary": "$69429",
+			"manager": "",
+			"direct_reports": [
+				"c526ef1e-36dc-4f61-9e39-063486967c7e",
+				"e13d0f4d-f804-4bcd-b259-3427a7263ee8",
+				"8e6ba4cd-4f2c-4444-a0bb-e65b6b582314",
+				"a09f87b1-d369-4a38-b752-9e2f508501d8",
+				"8f897e1e-2157-428d-b25f-e53ba5428eba",
+				"aaff1ecf-2351-45b2-9a51-edf802db7447"
+			]
+		},
+		{
+			"_id": "15e6cf54-0b07-4c2d-9486-ffb8914720e8",
+			"first_name": "Isac",
+			"last_name": "Lueilwitz",
+			"phone_number": "032-497-459",
+			"job_role": "HR",
+			"work_location": "Fountain Valley",
+			"salary": "$108492",
+			"manager": "",
+			"direct_reports": [
+				"81b1010b-6df0-4095-a48b-4a80bf31030b",
+				"401e7055-b750-4455-8096-0563e3d8271f",
+				"4c3f4bf8-f601-4c6d-b3cf-09583b0d9391"
+			]
+		},
+		{
+			"_id": "433811cc-5733-4112-88d2-21cfaa8650b4",
+			"first_name": "Jaiden",
+			"last_name": "Kunde",
+			"phone_number": "928-925-279",
+			"job_role": "HR",
+			"work_location": "Cicero",
+			"salary": "$56821",
+			"manager": "",
+			"direct_reports": [
+				"d9311995-e586-4c9b-8709-118de4ae6c99",
+				"f5784d73-2ecb-4947-b931-cf802d209984",
+				"00991a87-8058-48e2-9e35-85724585b37b"
+			]
+		}
+	]
+}

@@ -11,6 +11,7 @@ function createRandomUser(jobType) {
   let username = faker.internet.userName(firstName + lastName);
   let password = faker.internet.password();
   let direct_reports = [];
+  let manager = "";
 
   return {
     _id: faker.datatype.uuid(),
@@ -22,33 +23,44 @@ function createRandomUser(jobType) {
     salary: salary,
     username: username,
     password: password,
-    direct_reports: direct_reports
+    direct_reports: direct_reports,
+    manager: manager
   };
 }
 
-function generateEmployees() {
-  let employees = [];
-  let raw = [];
+function generateRaw() {
+  let raw = []
 
   // regular employees
   for (let i = 0; i < 20; i++) {
     let random = createRandomUser();
-    let employee = {};
-    employee._id = random._id;
-    employee.first_name = random.first_name;
-    employee.last_name = random.last_name;
-    employee.phone_number = random.phone_number;
-    employee.job_role = random.job_role;
-    employee.work_location = random.work_location;
-    employee.salary = random.salary;
-
-    employees.push(employee);
     raw.push(random);
   }
 
   // HR employees
   for (let i = 0; i < 5; i++) {
     let random = createRandomUser("HR");
+    raw.push(random);
+  }
+
+  // add managers and direct reports
+  for (let i = 0; i < 20; i++) {
+    let random = raw[i];
+    let num = Math.floor(Math.random() * 5) + 20;
+    let manager = raw[num];
+    random.manager = manager._id;
+    manager.direct_reports.push(random._id);
+  }
+
+  return raw;
+
+}
+
+function generateEmployees(raw) {
+  let employees = [];
+
+  for (let i = 0; i < raw.length; i++) {
+    let random = raw[i]
     let employee = {};
     employee._id = random._id;
     employee.first_name = random.first_name;
@@ -57,12 +69,13 @@ function generateEmployees() {
     employee.job_role = random.job_role;
     employee.work_location = random.work_location;
     employee.salary = random.salary;
+    employee.manager = random.manager;
+    employee.direct_reports = random.direct_reports;
 
     employees.push(employee);
-    raw.push(random);
   }
 
-  return {employees: employees, raw:raw};
+  return { employees: employees };
 }
 
 function generateCredentials(raw) {
@@ -83,14 +96,12 @@ function generateCredentials(raw) {
 }
 
 function generateData() {
-  const raw_emp = generateEmployees();
-  const employees = raw_emp.employees;
-  const raw = raw_emp.raw;
+  const raw = generateRaw();
+  const employees = generateEmployees(raw);
   let credentials = generateCredentials(raw);
-  let direct_reports = [];
 
 
-  return { employees: employees, credentials:credentials };
+  return { employees: employees, credentials: credentials};
 }
 
 function generateJSON() {
