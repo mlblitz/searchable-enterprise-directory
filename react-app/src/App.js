@@ -1,6 +1,8 @@
+// _id, first_name, last_name, phone_number, job_role, work_location, salary
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
+import Body from './Body';
 import './Header.css';
 
 function App() {
@@ -25,6 +27,7 @@ useEffect(() => {
 return (
   <div className="App">
     <Header/>
+    <Body/>
   </div>
 );
 }
