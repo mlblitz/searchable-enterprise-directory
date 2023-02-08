@@ -3,15 +3,10 @@ import './Body.css';
 
 function Body() {
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedOptions, setSelectedOptions] = useState([]);
+    const [selectedOption, setSelectedOption] = useState('');
 
     const handleOptionChange = (event) => {
-        const option = event.target.value;
-        if (selectedOptions.includes(option)) {
-            setSelectedOptions(selectedOptions.filter((o) => o !== option));
-        } else {
-            setSelectedOptions([...selectedOptions, option]);
-        }
+        setSelectedOption(event.target.value);
     };
 
     return (
@@ -25,57 +20,57 @@ function Body() {
                 <div className="checkbox-group">
                     <label>
                         <input
-                            type="checkbox"
+                            type="radio"
                             value="_id"
-                            checked={selectedOptions.includes("_id")}
+                            checked={selectedOption === "_id"}
                             onChange={handleOptionChange} />
-                        _id
+                        id
                     </label>
                     <label>
                         <input
-                            type="checkbox"
+                            type="radio"
                             value="first_name"
-                            checked={selectedOptions.includes("first_name")}
+                            checked={selectedOption === "first_name"}
                             onChange={handleOptionChange} />
-                        first_name
+                        first name
                     </label>
                     <label>
                         <input
-                            type="checkbox"
+                            type="radio"
                             value="last_name"
-                            checked={selectedOptions.includes("last_name")}
+                            checked={selectedOption === "last_name"}
                             onChange={handleOptionChange} />
-                        last_name
+                        last name
                     </label>
                     <label>
                         <input
-                            type="checkbox"
+                            type="radio"
                             value="phone_number"
-                            checked={selectedOptions.includes("phone_number")}
+                            checked={selectedOption === "phone_number"}
                             onChange={handleOptionChange} />
-                        phone_number
+                        phone number
                     </label>
                     <label>
                         <input
-                            type="checkbox"
+                            type="radio"
                             value="job_role"
-                            checked={selectedOptions.includes("job_role")}
+                            checked={selectedOption === "job_role"}
                             onChange={handleOptionChange} />
-                        job_role
+                        job role
                     </label>
                     <label>
                         <input
-                            type="checkbox"
+                            type="radio"
                             value="work_location"
-                            checked={selectedOptions.includes("work_location")}
+                            checked={selectedOption === "work_location"}
                             onChange={handleOptionChange} />
-                        work_location
+                        work location
                     </label>
                     <label>
                         <input
-                            type="checkbox"
+                            type="radio"
                             value="salary"
-                            checked={selectedOptions.includes("salary")}
+                            checked={selectedOption === "salary"}
                             onChange={handleOptionChange} />
                         salary
                     </label>
@@ -87,4 +82,3 @@ function Body() {
 }
 
 export default Body;
-

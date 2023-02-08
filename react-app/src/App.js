@@ -3,6 +3,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Body from './Body';
+import NavBar from './NavBar';
 import './Header.css';
 
 function App() {
@@ -26,6 +27,7 @@ useEffect(() => {
 
 return (
   <div className="App">
+    <NavBar/>
     <Header/>
     <Body/>
   </div>

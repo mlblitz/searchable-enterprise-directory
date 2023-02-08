@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './logo.png';
+import searchIcon from './search-icon.png';
 import './Header.css';
 
 const Header = () => {
@@ -15,8 +16,9 @@ const Header = () => {
         </ul>
       </nav>
       <form className="search-form">
-        <input type="text" placeholder="Search..." />
-        <button type="submit">Go</button>
+        <button type="submit">
+          <img src={searchIcon} alt="Search" />
+        </button>
       </form>
       <a href="login" className="login-link">Log in</a>
     </nav>

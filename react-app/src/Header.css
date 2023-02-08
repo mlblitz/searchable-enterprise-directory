@@ -1,4 +1,6 @@
-/* // Header.css */
+/* Header.css */
+
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -7,7 +9,7 @@
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
   position: fixed;
-  top: 0;
+  top: 20;
   left: 0;
   right: 0;
   z-index: 999;
@@ -34,32 +36,32 @@ nav a {
 
 nav a:hover {
   background-color: #d1d0d0;
-    color: rgb(101, 1, 1);
+  color: rgb(101, 1, 1);
 }
 
 .search-form {
-  display: flex;
-  margin-right: 20px;
-}
+    display: flex;
+    margin-right: 20px;
+  }
+  
+  .search-form button[type="submit"] {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-form img {
+    width: 20px;
+    height: 20px;
+  }
 
-.search-form input[type="text"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-right: none;
-  font-size: 16px;
-}
+  .login-link {
+    color: #bc0000;
+    text-decoration: none;
+    margin-right: 20px;
+    border: 1px solid rgb(255, 0, 0);
+    padding: 10px 20px;
+    border-radius: 4px;
+  }
 
-.search-form button[type="submit"] {
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  border: 1px solid #333;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.login-link {
-  color: #bc0000;
-  text-decoration: none;
-  margin-right: 20px;
-}
+  
