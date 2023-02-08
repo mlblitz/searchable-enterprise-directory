@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const genData = require("./data/genData");
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -39,6 +40,7 @@ app.get("/", async (req, res) => {
     res.send(data);
 })
 
+genData.generateJSON();
 
 // app.use(express.static("./../build"));
 app.listen(8081, () => { console.log("listening on port 8081") });
