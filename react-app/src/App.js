@@ -1,6 +1,11 @@
-import logo from './logo.svg';
+// _id, first_name, last_name, phone_number, job_role, work_location, salary
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import Header from './Header';
+import Login from './Login';
+import Body from './Body';
+import NavBar from './NavBar';
+import './Header.css';
 
 function App() {
   const url = "http://localhost:8081";
@@ -21,11 +26,15 @@ useEffect(() => {
   fetchData();
 }, []);
 
-  return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
-  );
+return (
+  <div className="App">
+    <Login/>
+    <NavBar/>
+    <Header/>
+    <Body/>
+  </div>
+);
 }
 
 export default App;
+
