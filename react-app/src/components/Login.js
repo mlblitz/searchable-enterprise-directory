@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles//Header.css';
+import '../styles/Login.css';
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);

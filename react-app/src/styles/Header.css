@@ -57,49 +57,5 @@ nav a:hover {
     height: 20px;
   }
 
-/* Login.css */
 
-.login-button {
-    color: #bc0000;
-    text-decoration: none;
-    border: 1px solid rgb(255, 0, 0);
-    padding: 10px 20px;
-    border-radius: 4px;
-  }
-  
-  .login-modal {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-  }
-  
-  .login-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .close-button {
-    float: right;
-    cursor: pointer;
-  }
-  
-  form {
-    margin-top: 20px;
-  }
-  
-  label,
-  input {
-    display: block;
-    margin-bottom: 10px;
-  }
-  
   
