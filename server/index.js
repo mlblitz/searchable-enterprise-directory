@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+mongoose.set('strictQuery', false);
 const cors = require("cors");
 const genData = require("./data/genData");
 const app = express();
@@ -20,13 +21,26 @@ db.once("open", function () {
     console.log("Connected successfully");
 });
 
-const Schema = new mongoose.Schema({});
-const Employees = mongoose.model("employees", Schema);
-const Credentials = mongoose.model("credentials", Schema);
+const Schema = mongoose.Schema;
+
+const EmployeeSchema = new Schema({});
+const Employee = mongoose.model("employees", EmployeeSchema);
+
+const CredentialSchema = new Schema({});
+const Credential = mongoose.model("credentials", CredentialSchema);
 
 
 app.get("/home", async (req, res) => {
-    const employees = await Employees.find({});
+    let field = req.query.field;
+    let search = req.query.search;
+
+    if (field === 'emp_id') {
+        search = parseInt(search);
+    } else {
+        search = {'$regex': search,$options:'i'};
+    }
+
+    const employees = await Employee.find({[field]: search});
 
     try {
         res.send(employees);
@@ -36,17 +50,19 @@ app.get("/home", async (req, res) => {
 });
 
 app.get("/login", async (req, res) => {
-    const credentials = await Credentials.find({});
+    let username = req.query.username;
+    let password = req.query.password;
+
+    const emp_id = await Credential.findOne({username: username, password: password}, 'emp_id');
 
     try {
-        res.send(credentials);
+        res.send(emp_id);
     } catch (error) {
         res.status(500).send(error);
     }
 });
 
 // uncomment this line if you want to generate the json data files
-genData.generateJSON();
+// genData.generateJSON();
 
-// app.use(express.static("./../build"));
 app.listen(8081, () => { console.log("listening on port 8081") });

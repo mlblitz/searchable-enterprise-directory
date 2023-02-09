@@ -1,5 +1,6 @@
 const { faker } = require('@faker-js/faker');
 const fs = require('fs');
+let global_id = 0;
 
 function createRandomUser(jobType) {
   let firstName = faker.name.firstName();
@@ -13,9 +14,11 @@ function createRandomUser(jobType) {
   let direct_reports = [];
   let manager = "";
   let id = faker.datatype.uuid();
+  let emp_id = ++global_id;
 
   return {
     _id: id,
+    emp_id: emp_id,
     first_name: firstName,
     last_name: lastName,
     phone_number: phone,
@@ -49,8 +52,8 @@ function generateRaw() {
     let random = raw[i];
     let num = Math.floor(Math.random() * 5) + 20;
     let manager = raw[num];
-    random.manager = manager._id;
-    manager.direct_reports.push(random._id);
+    random.manager = manager.emp_id;
+    manager.direct_reports.push(random.emp_id);
   }
 
   return raw;
@@ -64,6 +67,7 @@ function generateEmployees(raw) {
     let random = raw[i]
     let employee = {};
     employee._id = random._id;
+    employee.emp_id = random.emp_id;
     employee.first_name = random.first_name;
     employee.last_name = random.last_name;
     employee.phone_number = random.phone_number;
@@ -87,6 +91,7 @@ function generateCredentials(raw) {
     let credential = {};
 
     credential._id = raw_data._id;
+    credential.emp_id = raw_data.emp_id;
     credential.username = raw_data.username;
     credential.password = raw_data.password;
 
