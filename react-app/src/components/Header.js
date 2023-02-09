@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import logo from '../logo.png';
+import Login from './Login';
 import searchIcon from '../search-icon.png';
 import '../styles/Header.css';
 
-const Header = () => {
+const Header = ({setCurrentUser}) => {
   const [showLoginModal, setShowLoginModal] = useState(false);
 
   const handleLoginClick = () => {
@@ -30,7 +31,7 @@ const Header = () => {
           <img src={searchIcon} alt="Search" />
         </button>
       </form>
-      
+      <Login setCurrentUser = {setCurrentUser}/>
       
     </nav>
   );

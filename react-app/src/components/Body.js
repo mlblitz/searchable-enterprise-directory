@@ -12,11 +12,14 @@ function Body(props) {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        window.location.replace(`/home?search=${selectedOption}&field=${searchTerm}`);
-        const url = `http://localhost:8081/home?search=${selectedOption}&field=${searchTerm}`;
+        //window.location.replace(`/home?search=${searchTerm}&field=${selectedOption}`);
+        const url = `http://localhost:8081/home?search=${searchTerm}&field=${selectedOption}`;
+        //console.log(url);
         const employees = await fetch(url)
+        
             .then(res => res.json());
-        props.setEmployee(employees);
+            console.log(employees);
+        props.setEmployees(employees);
     };
 
     return (
