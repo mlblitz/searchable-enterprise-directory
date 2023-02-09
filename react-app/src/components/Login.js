@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Login.css';
 
 const Login = (props) => {
@@ -23,7 +23,12 @@ const Login = (props) => {
 
     const url = `http://localhost:8081/login?username=${username}&password=${password}`;
     const currentUser = await fetch(url)
-        .then(res => res.json());
+      .then(res => res.json());
+
+    // localStorage.setItem("currentUser", currentUser);
+    // localStorage.setItem("currentUser", JSON.stringify(currentUser));
+    // console.log(localStorage.getItem("currentUser"));
+    // currentUser = secureLocalStorage.getItem("currentUser");
     props.setCurrentUser(currentUser);
 
     handleClose();

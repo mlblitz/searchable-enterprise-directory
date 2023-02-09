@@ -13,12 +13,12 @@ function App() {
 
   return (
     <div className="App">
-      
-      <NavBar />
-      <Header setCurrentUser = {setCurrentUser}/>
-      <Body setEmployees = {setEmployees}/>
 
-      <Results employees = {employees} currentUser = {currentUser}/>
+      <NavBar />
+      <Header setCurrentUser={setCurrentUser} />
+      <Body setEmployees={setEmployees} />
+
+      <Results employees={employees} />
 
     </div>
   );
