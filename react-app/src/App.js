@@ -8,23 +8,23 @@ import NavBar from './NavBar';
 import './Header.css';
 
 function App() {
-  const url = "http://localhost:8081";
-  const [data, setData] = useState([]);
+//   const url = "http://localhost:8081";
+//   const [data, setData] = useState([]);
 
 
-  async function fetchData() {
-    let data = await fetch(url)
-        .then(res => res.json())
-        // .then(res => console.log(res))
-        // .then(res => res.fields);
-    // console.log(films);
-    setData(data);
-    console.log(data);
-}
+//   async function fetchData() {
+//     let data = await fetch(url)
+//         .then(res => res.json())
+//         // .then(res => console.log(res))
+//         // .then(res => res.fields);
+//     // console.log(films);
+//     setData(data);
+//     console.log(data);
+// }
 
-useEffect(() => {
-  fetchData();
-}, []);
+// useEffect(() => {
+//   fetchData();
+// }, []);
 
 return (
   <div className="App">
