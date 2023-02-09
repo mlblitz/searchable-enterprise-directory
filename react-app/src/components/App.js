@@ -1,11 +1,11 @@
 // _id, first_name, last_name, phone_number, job_role, work_location, salary
-import './App.css';
+import '../styles/App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Login from './Login';
 import Body from './Body';
 import NavBar from './NavBar';
-import './Header.css';
+import '../styles/Header.css';
 
 function App() {
   const url = "http://localhost:8081";
