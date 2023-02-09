@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Login.css';
 
-const Login = () => {
+const Login = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
@@ -13,13 +13,19 @@ const Login = () => {
   };
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const username = event.target.username.value;
     const password = event.target.password.value;
 
-    window.history.pushState({}, "", `/login/${username}/${password}`);
+    // window.history.pushState({}, "", `/login/${username}/${password}`);
+
+    const url = `http://localhost:8081/login?username=${username}&password=${password}`;
+    const currentUser = await fetch(url)
+        .then(res => res.json());
+    props.setCurrentUser(currentUser);
+
     handleClose();
   };
 
