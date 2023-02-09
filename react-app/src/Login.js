@@ -14,8 +14,12 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Perform login logic here
-    window.location = '/login';
+
+    const username = event.target.username.value;
+    const password = event.target.password.value;
+
+    window.history.pushState({}, "", `/login/${username}/${password}`);
+    handleClose();
   };
 
   return (

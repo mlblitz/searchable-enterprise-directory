@@ -11,7 +11,7 @@ function Body() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        window.location.replace(`?search=${selectedOption}&field=${searchTerm}`);
+        window.location.replace(`/home?search=${selectedOption}&field=${searchTerm}`);
     };
 
     return (
@@ -84,6 +84,7 @@ function Body() {
                     <button type="submit">Go</button>
                 </form>
             </div>
+
         </div>
     );
 }
