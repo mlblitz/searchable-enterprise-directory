@@ -29,7 +29,12 @@ const Employee = mongoose.model("employees", EmployeeSchema);
 const CredentialSchema = new Schema({});
 const Credential = mongoose.model("credentials", CredentialSchema);
 
+// default so server doesn't crash
+app.get("/"), (req, res) => {
+    res.send("");
+}
 
+// route for search, requires query params
 app.get("/home", async (req, res) => {
     let field = req.query.field;
     let search = req.query.search;
@@ -37,10 +42,10 @@ app.get("/home", async (req, res) => {
     if (field === 'emp_id') {
         search = parseInt(search);
     } else {
-        search = {'$regex': search,$options:'i'};
+        search = { '$regex': search, $options: 'i' };
     }
 
-    const employees = await Employee.find({[field]: search});
+    const employees = await Employee.find({ [field]: search });
 
     try {
         res.send(employees);
@@ -49,11 +54,12 @@ app.get("/home", async (req, res) => {
     }
 });
 
+// route for login, requires params
 app.get("/login", async (req, res) => {
     let username = req.query.username;
     let password = req.query.password;
 
-    const emp_id = await Credential.findOne({username: username, password: password}, 'emp_id');
+    const emp_id = await Credential.findOne({ username: username, password: password }, 'emp_id');
 
     try {
         res.send(emp_id);
