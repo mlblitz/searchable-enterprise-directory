@@ -2,7 +2,7 @@
 import '../styles/App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
-import Login from './Login';
+import Results from './Results';
 import Body from './Body';
 import NavBar from './NavBar';
 import '../styles/Header.css';
@@ -13,11 +13,13 @@ function App() {
 
   return (
     <div className="App">
-      <Login setCurrentUser = {setCurrentUser}/>
+      
       <NavBar />
-      <Header />
+      <Header setCurrentUser = {setCurrentUser}/>
       <Body setEmployees = {setEmployees}/>
-      {/* <Result employees = {employees} currentUser = {currentUser}/> */}
+
+      <Results employees = {employees} currentUser = {currentUser}/>
+
     </div>
   );
 }
