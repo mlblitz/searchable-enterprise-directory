@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Body.css';
 
-function Body() {
+function Body(props) {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedOption, setSelectedOption] = useState('');
 
@@ -16,7 +16,7 @@ function Body() {
         const url = `http://localhost:8081/home?search=${selectedOption}&field=${searchTerm}`;
         const employees = await fetch(url)
             .then(res => res.json());
-
+        props.setEmployee(employees);
     };
 
     return (

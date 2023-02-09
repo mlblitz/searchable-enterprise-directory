@@ -8,6 +8,8 @@ import NavBar from './NavBar';
 import '../styles/Header.css';
 
 function App() {
+  const [employees, setEmployees] = useState([]);
+  const [currentUser, setCurrentUser] = useState(-1);
   // const url = "http://localhost:8081";
   // const [data, setData] = useState([]);
 
@@ -27,10 +29,11 @@ function App() {
 
   return (
     <div className="App">
-      <Login />
+      <Login setCurrentUser = {setCurrentUser}/>
       <NavBar />
       <Header />
-      <Body />
+      <Body setEmployees = {setEmployees}/>
+      <Result employees = {employees} currentUser = {currentUser}/>
     </div>
   );
 }
