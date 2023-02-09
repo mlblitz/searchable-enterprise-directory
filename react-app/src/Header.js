@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.png';
 import searchIcon from './search-icon.png';
 import './Header.css';
 
 const Header = () => {
+  const [showLoginModal, setShowLoginModal] = useState(false);
+
+  const handleLoginClick = () => {
+    setShowLoginModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowLoginModal(false);
+  };
+
   return (
     <nav className="header">
       <img src={logo} alt="Your Logo" />
       <nav>
         <ul>
           <li><a href="home">For Individuals</a></li>
-          <li><a href="services">For Business</a></li>
-          <li><a href="about">Claim Center</a></li>
-          <li><a href="contact">Prepare & Prevent</a></li>
+          <li><a href="home">For Business</a></li>
+          <li><a href="home">Claim Center</a></li>
+          <li><a href="home">Prepare & Prevent</a></li>
         </ul>
       </nav>
       <form className="search-form">
@@ -20,9 +30,11 @@ const Header = () => {
           <img src={searchIcon} alt="Search" />
         </button>
       </form>
-      <a href="login" className="login-link">Log in</a>
+      
+      
     </nav>
   );
 };
 
 export default Header;
+

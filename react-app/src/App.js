@@ -2,6 +2,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
+import Login from './Login';
 import Body from './Body';
 import NavBar from './NavBar';
 import './Header.css';
@@ -27,6 +28,7 @@ useEffect(() => {
 
 return (
   <div className="App">
+    <Login/>
     <NavBar/>
     <Header/>
     <Body/>
