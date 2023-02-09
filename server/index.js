@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
+mongoose.set('strictQuery', false);
 const cors = require("cors");
+const genData = require("./data/genData");
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -19,26 +21,48 @@ db.once("open", function () {
     console.log("Connected successfully");
 });
 
-// const Schema = new mongoose.Schema({});
-// const Film = mongoose.model("films", Schema);
-// const Planet = mongoose.model("planets", Schema);
+const Schema = mongoose.Schema;
+
+const EmployeeSchema = new Schema({});
+const Employee = mongoose.model("employees", EmployeeSchema);
+
+const CredentialSchema = new Schema({});
+const Credential = mongoose.model("credentials", CredentialSchema);
 
 
-// app.get("/films", async (req, res) => {
-//     const films = await Film.find({});
+app.get("/home", async (req, res) => {
+    let field = req.query.field;
+    let search = req.query.search;
 
-//     try {
-//         res.send(films);
-//     } catch (error) {
-//         res.status(500).send(error);
-//     }
-// });
+    if (field === 'emp_id') {
+        search = parseInt(search);
+    } else {
+        search = {'$regex': search,$options:'i'};
+    }
 
-app.get("/", async (req, res) => {
-    const data = {message: "hello world!"};
-    res.send(data);
-})
+    const employees = await Employee.find({[field]: search});
 
+    try {
+        res.send(employees);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
 
-// app.use(express.static("./../build"));
+app.get("/login", async (req, res) => {
+    let username = req.query.username;
+    let password = req.query.password;
+
+    const emp_id = await Credential.findOne({username: username, password: password}, 'emp_id');
+
+    try {
+        res.send(emp_id);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+});
+
+// uncomment this line if you want to generate the json data files
+// genData.generateJSON();
+
 app.listen(8081, () => { console.log("listening on port 8081") });

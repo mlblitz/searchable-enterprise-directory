@@ -12,6 +12,7 @@ const Login = () => {
     setIsOpen(false);
   };
 
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -21,6 +22,7 @@ const Login = () => {
     window.history.pushState({}, "", `/login/${username}/${password}`);
     handleClose();
   };
+
 
   return (
     <div>
@@ -33,7 +35,7 @@ const Login = () => {
             <span className="close-button" onClick={handleClose}>
               &times;
             </span>
-            <form onSubmit={handleSubmit}>
+            <form>
               <label htmlFor="username">Username:</label>
               <input type="text" id="username" name="username" />
               <label htmlFor="password">Password:</label>
