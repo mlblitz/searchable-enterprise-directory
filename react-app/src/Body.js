@@ -11,7 +11,11 @@ function Body() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        const url = `http://localhost:8081/home?search=${selectedOption}&field=${searchTerm}`;
+        //console.log(fetch(url));
+        //fetch(url)
         window.location.replace(`?search=${selectedOption}&field=${searchTerm}`);
+        console.log(fetch(url));
     };
 
     return (
@@ -27,8 +31,8 @@ function Body() {
                         <label>
                             <input
                                 type="radio"
-                                value="_id"
-                                checked={selectedOption === "_id"}
+                                value="emp_id"
+                                checked={selectedOption === "emp_id"}
                                 onChange={handleOptionChange} />
                             Id
                         </label>
