@@ -24,6 +24,8 @@ function Body(props) {
 
     return (
         <div className="body">
+            <div>Please Enter an Employee Below</div>
+            <div>_</div>
             <div className="search-container">
                 <form onSubmit={handleSubmit}>
                     <input
@@ -98,3 +100,4 @@ function Body(props) {
 }
 
 export default Body;
+
