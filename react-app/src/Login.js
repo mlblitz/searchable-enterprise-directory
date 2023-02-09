@@ -12,6 +12,18 @@ const Login = () => {
     setIsOpen(false);
   };
 
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const username = event.target.username.value;
+    const password = event.target.password.value;
+
+    window.history.pushState({}, "", `/login/${username}/${password}`);
+    handleClose();
+  };
+
+
   return (
     <div>
       <button className="login-button" onClick={handleOpen}>

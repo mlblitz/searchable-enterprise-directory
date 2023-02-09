@@ -11,11 +11,11 @@ function Body() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        window.location.replace(`/home?search=${selectedOption}&field=${searchTerm}`);
         const url = `http://localhost:8081/home?search=${selectedOption}&field=${searchTerm}`;
-        //console.log(fetch(url));
-        //fetch(url)
-        window.location.replace(`?search=${selectedOption}&field=${searchTerm}`);
         console.log(fetch(url));
+
     };
 
     return (
@@ -88,6 +88,7 @@ function Body() {
                     <button type="submit">Go</button>
                 </form>
             </div>
+
         </div>
     );
 }
