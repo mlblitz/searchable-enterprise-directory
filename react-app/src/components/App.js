@@ -17,7 +17,9 @@ function App() {
       <NavBar />
       <Header setCurrentUser = {setCurrentUser}/>
       <Body setEmployees = {setEmployees}/>
+
       <Results employees = {employees} currentUser = {currentUser}/>
+
     </div>
   );
 }
