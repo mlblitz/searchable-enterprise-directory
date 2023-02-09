@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import logo from './logo.png';
-import searchIcon from './search-icon.png';
-import './Header.css';
+import logo from '../logo.png';
+import searchIcon from '../search-icon.png';
+import '../styles/Header.css';
 
 const Header = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);

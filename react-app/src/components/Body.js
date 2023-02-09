@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import './Body.css';
+import '../styles/Body.css';
 
 function Body() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedOption, setSelectedOption] = useState('');
+    const [employees, setEmployees] = useState([]);
 
     const handleOptionChange = (event) => {
         setSelectedOption(event.target.value);
@@ -15,8 +16,10 @@ function Body() {
         //console.log(fetch(url));
         //fetch(url)
         window.location.replace(`?search=${selectedOption}&field=${searchTerm}`);
-        const results = await (fetch(url)).then(res => res.json());
-        console.log(results);
+        const results = await (fetch(url))
+            .then(res => res.json());
+        setEmployees(employees);
+        // console.log(employees);
     };
 
     return (
