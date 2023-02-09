@@ -3,9 +3,9 @@
     justify-content: flex-end;
     align-items: flex-end;
     padding: 5px;
-    background-color: #d3d3d3;
-    color: #868686;
-    font-size: 16px;
+    background-color: #ffffff;
+    color: #1f1f1f;
+    font-size: 12px;
     z-index: 998;
   }
   
@@ -19,7 +19,7 @@
   .nav-bar a {
     display: block;
     padding: 5px 40px;
-    color: #6c6c6c;
+    color: #545454;
     text-decoration: none;
   }
   
