@@ -12,13 +12,10 @@ function Body(props) {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        //window.location.replace(`/home?search=${searchTerm}&field=${selectedOption}`);
         const url = `http://localhost:8081/home?search=${searchTerm}&field=${selectedOption}`;
-        //console.log(url);
+
         const employees = await fetch(url)
-        
             .then(res => res.json());
-            console.log(employees);
         props.setEmployees(employees);
     };
 

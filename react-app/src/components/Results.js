@@ -1,8 +1,7 @@
 import React from 'react';
 import '../styles/Results.css';
 
-function Results({ employees }) {
-    const currentUser = localStorage.getItem("currentUser");
+function Results({ employees, currentUser}) {
     console.log(currentUser);
 
     return (
@@ -17,7 +16,6 @@ function Results({ employees }) {
                         <p>Phone Number: {employee.phone_number}</p>
                         <p>Job Role: {employee.job_role}</p>
                         <p>Work Location: {employee.work_location}</p>
-                        {console.log(currentUser)}
                         {(currentUser === employee.emp_id || currentUser === employee.manager) && (
                             <p>Salary: {employee.salary}</p>
                         )}

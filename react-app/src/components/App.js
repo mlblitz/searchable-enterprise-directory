@@ -9,7 +9,7 @@ import '../styles/Header.css';
 
 function App() {
   const [employees, setEmployees] = useState([]);
-  const [currentUser, setCurrentUser] = useState(-1);
+  const [currentUser, setCurrentUser] = useState({});
 
   return (
     <div className="App">
@@ -18,7 +18,7 @@ function App() {
       <Header setCurrentUser={setCurrentUser} />
       <Body setEmployees={setEmployees} />
 
-      <Results employees={employees} />
+      <Results employees={employees} currentUser = {currentUser}/>
 
     </div>
   );

@@ -59,10 +59,15 @@ app.get("/login", async (req, res) => {
     let username = req.query.username;
     let password = req.query.password;
 
-    const emp_id = await Credential.findOne({ username: username, password: password }, 'emp_id');
+    const cred = await Credential.findOne({ username: username, password: password }, 'emp_id')
+    // const info = await Employee.findOne({ emp_id: cred.emp_id }, 'first_name')
+    // const result = {
+    //     emp_id: cred.emp_id,
+    //     first_name: info.first_name
+    // }
 
     try {
-        res.send(emp_id);
+        res.send(cred);
     } catch (error) {
         res.status(500).send(error);
     }
