@@ -12,14 +12,15 @@ function Body() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        window.location.replace(`/home?search=${selectedOption}&field=${searchTerm}`);
         const url = `http://localhost:8081/home?search=${selectedOption}&field=${searchTerm}`;
-        //console.log(fetch(url));
-        //fetch(url)
+
         window.location.replace(`?search=${selectedOption}&field=${searchTerm}`);
         const results = await (fetch(url))
             .then(res => res.json());
         setEmployees(employees);
-        // console.log(employees);
+
     };
 
     return (
@@ -92,6 +93,7 @@ function Body() {
                     <button type="submit">Go</button>
                 </form>
             </div>
+
         </div>
     );
 }
