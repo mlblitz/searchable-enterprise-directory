@@ -9,12 +9,13 @@ function Body() {
         setSelectedOption(event.target.value);
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         window.location.replace(`/home?search=${selectedOption}&field=${searchTerm}`);
         const url = `http://localhost:8081/home?search=${selectedOption}&field=${searchTerm}`;
-        console.log(fetch(url));
+        const employees = await fetch(url)
+            .then(res => res.json());
 
     };
 
