@@ -9,7 +9,8 @@ import '../styles/Header.css';
 
 function App() {
   const [employees, setEmployees] = useState([]);
-  const [currentUser, setCurrentUser] = useState({});
+  const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem('currentUser')) || null);
+
 
   return (
     <div className="App">

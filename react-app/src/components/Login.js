@@ -22,10 +22,12 @@ const Login = (props) => {
     const url = `http://localhost:8081/login?username=${username}&password=${password}`;
     const currentUser = await fetch(url)
       .then(res => res.json());
-
+    
+    localStorage.setItem('currentUser', JSON.stringify(currentUser.emp_id));
     props.setCurrentUser(currentUser.emp_id);
 
     handleClose();
+    window.location.assign('/home');
   };
 
 
@@ -55,3 +57,4 @@ const Login = (props) => {
 };
 
 export default Login;
+
