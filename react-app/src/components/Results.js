@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/Results.css';
 
 function Results({ employees, currentUser}) {
-    console.log(currentUser);
 
     return (
         <div className="results-container">
@@ -16,7 +15,7 @@ function Results({ employees, currentUser}) {
                         <p>Phone Number: {employee.phone_number}</p>
                         <p>Job Role: {employee.job_role}</p>
                         <p>Work Location: {employee.work_location}</p>
-                        {(currentUser === employee.emp_id || currentUser === employee.manager) && (
+                        {(currentUser.emp_id === employee.emp_id || currentUser.emp_id === employee.manager || currentUser.job_role === "HR") && (
                             <p>Salary: {employee.salary}</p>
                         )}
                     </div>
