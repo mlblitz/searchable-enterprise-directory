@@ -2,14 +2,16 @@
 
 .login-button {
   color: #bc0000;
-  text-decoration: none;
   border: 1px solid rgb(255, 0, 0);
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 10px;
   display: flex;
   align-items: left;
   justify-content: left;
   z-index: 999;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .login-modal {
