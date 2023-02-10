@@ -59,17 +59,18 @@ app.get("/login", async (req, res) => {
     let username = req.query.username;
     let password = req.query.password;
 
-    const cred = await Credential.findOne({ username: username, password: password }, 'emp_id')
-    // const info = await Employee.findOne({ emp_id: cred.emp_id }, 'first_name')
-    // const result = {
-    //     emp_id: cred.emp_id,
-    //     first_name: info.first_name
-    // }
-
-    try {
-        res.send(cred);
-    } catch (error) {
-        res.status(500).send(error);
+    const cred = await Credential.findOne({ username: username, password: password }, 'emp_id');
+    emp_id = Number(String(cred).split(" ")[2]);
+    if (!emp_id) {
+        res.status(500).send("employee not found");
+    }
+    else {
+        const user = await Employee.findOne({emp_id: emp_id}, 'emp_id first_name last_name job_role');
+        try {
+            res.send(user);
+        } catch (error) {
+            res.status(500).send(error);
+        }
     }
 });
 
