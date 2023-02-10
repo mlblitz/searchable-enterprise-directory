@@ -47,10 +47,15 @@ function generateRaw() {
     raw.push(random);
   }
 
+  for (let i = 0; i < 5; i++) {
+    let random = createRandomUser("Manager");
+    raw.push(random);
+  }
+
   // add managers and direct reports
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 25; i++) {
     let random = raw[i];
-    let num = Math.floor(Math.random() * 5) + 20;
+    let num = Math.floor(Math.random() * 5) + 25;
     let manager = raw[num];
     random.manager = manager.emp_id;
     manager.direct_reports.push(random.emp_id);
