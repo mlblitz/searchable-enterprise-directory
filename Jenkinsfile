@@ -2,7 +2,6 @@ node {
     stage('Install dependencies'){
         bat'''
             set PATH=C:/"Program Files"/nodejs
-            cd react-app
             npm install
         '''
     }
