@@ -23,8 +23,8 @@ const Login = (props) => {
     const currentUser = await fetch(url)
       .then(res => res.json());
     
-    localStorage.setItem('currentUser', JSON.stringify(currentUser.emp_id));
-    props.setCurrentUser(currentUser.emp_id);
+    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+    props.setCurrentUser(currentUser);
 
     handleClose();
     window.location.assign('/home');
