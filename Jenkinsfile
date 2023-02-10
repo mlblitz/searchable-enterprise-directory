@@ -1,4 +1,7 @@
 node {
+    stage('checkout'){
+        git (branch:'jenkins-blitz', url:'https://github.com/mlblitz/searchable-enterprise-directory.git')
+    }
     stage('Install dependencies'){
         bat'''
             set PATH=C:/"Program Files"/nodejs
