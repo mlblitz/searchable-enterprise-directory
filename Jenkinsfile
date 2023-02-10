@@ -1,10 +1,6 @@
 node {
     stage('checkout'){
-<<<<<<< Updated upstream
-        git (branch:'jenkins-blitz', url:'https://github.com/mlblitz/searchable-enterprise-directory.git')
-=======
         git (branch:'main', url:'https://github.com/mlblitz/searchable-enterprise-directory.git')
->>>>>>> Stashed changes
     }
     stage('Install dependencies'){
         bat'''
