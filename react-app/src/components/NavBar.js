@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/NavBar.css';
 
-const NavBar = () => {
+const NavBar = ({currentUser}) => {
   return (
     <nav className="nav-bar">
       <ul>
@@ -11,6 +11,7 @@ const NavBar = () => {
         <li><a href="#">Investors</a></li>
         <li><a href="#">Sustainability</a></li>
         <li><a href="#">Contact Us</a></li>
+        <li>{currentUser ? `Welcome, ${currentUser.first_name}` : 'Log in'}</li>
       </ul>
     </nav>
   );

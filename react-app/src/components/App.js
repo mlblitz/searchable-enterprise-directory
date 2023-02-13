@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
 
-      <NavBar />
+      <NavBar currentUser = {currentUser}/>
       <Header setCurrentUser={setCurrentUser} />
       <Body setEmployees={setEmployees} />
 
