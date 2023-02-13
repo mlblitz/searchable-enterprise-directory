@@ -79,14 +79,14 @@ function Body(props) {
                                 onChange={handleOptionChange} />
                             Work Location
                         </label>
-                        <label>
+                        {/* <label>
                             <input
                                 type="radio"
                                 value="salary"
                                 checked={selectedOption === "salary"}
                                 onChange={handleOptionChange} />
                             Salary
-                        </label>
+                        </label> */}
                     </div>
                     <button type="submit">Go</button>
                 </form>

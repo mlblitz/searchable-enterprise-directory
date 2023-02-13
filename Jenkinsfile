@@ -17,10 +17,10 @@ node {
         '''
     }
     stage('Deploy'){
-        // bat '''xcopy react-app\\build\\* \\Software\\nginx-1.22.0\\html\\ /s /y'''
-        bat '''
-            cd react-app
-            npm run start
-        '''
+        bat '''xcopy react-app\\build\\* \\Software\\nginx-1.22.0\\html\\ /s /y'''
+        // bat '''
+        //     cd react-app
+        //     npm run start
+        // '''
     }
 }
