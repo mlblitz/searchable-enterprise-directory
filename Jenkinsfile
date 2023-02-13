@@ -1,6 +1,6 @@
 node {
     stage('checkout'){
-        git (branch:'main', url:'https://github.com/mlblitz/searchable-enterprise-directory.git')
+        git (branch:'fixes', url:'https://github.com/mlblitz/searchable-enterprise-directory.git')
     }
     stage('Install dependencies'){
         bat'''
